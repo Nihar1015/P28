@@ -87,7 +87,7 @@ function detectCollision(lstone, lmango){
 	var distance=dist(stoneBodyPosition.x, stoneBodyPosition.y, mangoBodyPosition.x, mangoBodyPosition.y)
 	console.log(distance);
 	console.log(lmango.radius + lstone.radius);
-		if(distance<-lmango.radius+lstone.radius)
+		if(distance<=lmango.radius+lstone.radius)
 		{
 			console.log("hi");
 			Matter.Body.setStatic(lmango.body,false);
